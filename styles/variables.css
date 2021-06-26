@@ -1,5 +1,6 @@
-html {
+:root {
   /* Colours */
+  --header__text: #fff;
 
   /* Font Sizes */
 

@@ -1,27 +1,24 @@
 .container {
-	display: relative;
-	width: 100%;
 	background-color: #2670FF;
-	height: 70px;
+	height: 7rem;
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .title {
 	margin: 0;
-	text-align: center;
-	display: absolute;
-	bottom: 0;
-
 }
 
 .gear {
-	display: absolute;
+	padding: 0 1rem;
 	margin: 0;
 }
 
 .title, .gear {
-	color: #fff;
-	font-size: 30px;
+	color: var(--header__text);
+	font-size: 3rem;
 }
-
-
-/* Create a global variables css file */

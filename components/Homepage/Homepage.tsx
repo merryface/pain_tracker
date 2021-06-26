@@ -4,6 +4,8 @@ import Header from '../common/Header'
 
 export default function Homepage() {
   return (
+    <>
     <Header />
+    <p>Hello world</p></>
   )
 }

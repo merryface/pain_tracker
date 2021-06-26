@@ -4,7 +4,7 @@ import Header from './Header';
 const ConnectedHeader = () => {
   return (
     <Header 
-      date={ new Date() }
+    handleClick = {() => console.log("clicked!")}
     />
   );
 };
