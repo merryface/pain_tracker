@@ -1,0 +1,23 @@
+.container {
+	background-color: var(--primary-colour);
+	height: 7rem;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.title {
+	margin: 0;
+}
+
+.gear {
+	padding: 0 1rem;
+	margin: 0;
+}
+
+.title, .gear {
+	color: var(--header__text);
+	font-size: 3rem;
+}
