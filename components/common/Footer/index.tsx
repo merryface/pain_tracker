@@ -1,7 +1,7 @@
 import Footer from './Footer';
 // import getData from 'somewhere';
 
-const ConnectedHeader = () => {
+const ConnectedFooter = () => {
   return (
     <Footer
     historical = {() => console.log("historical clicked!")}
@@ -11,4 +11,4 @@ const ConnectedHeader = () => {
   );
 };
 
-export default ConnectedHeader;
+export default ConnectedFooter;
