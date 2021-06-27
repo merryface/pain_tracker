@@ -1,12 +1,13 @@
-// keep it to just accepting props, limit the amount of logic. try to keep it so that it only displays logic (reusability and readability)
-import styles from './Header.module.css';
+import styles from './Footer.module.css';
 
-const Footer = ({ date = new Date() }) => {
+const Footer = (props: any) => {
 
-  const displayDate = date.toLocaleTimeString();
-	
   return (
-    <section className={ styles.header }>{ displayDate }</section>
+    <footer className={ styles.container }>
+      <span className={ styles.navButton } onClick={props.prevDay}>&#x2190; Prev</span> {/* left arrow */}
+      <span className={ styles.navButton } onClick={props.historical}>Historical Data</span>
+      <span className={ styles.navButton } onClick={props.nextDay}>Next &#x2192;</span> {/* right arrow */}
+    </footer>
   );
 };
 

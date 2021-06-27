@@ -4,11 +4,9 @@ import Header from './Header';
 const ConnectedHeader = () => {
   return (
     <Header 
-    handleClick = {() => console.log("clicked!")}
+    handleClick = {() => console.log("gear clicked!")}
     />
   );
 };
 
 export default ConnectedHeader;
-
-// logic for the component in this file. especially useful in functional and hooks

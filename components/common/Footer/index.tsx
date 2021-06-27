@@ -3,12 +3,12 @@ import Footer from './Footer';
 
 const ConnectedHeader = () => {
   return (
-    <Footer 
-      date={ new Date() }
+    <Footer
+    historical = {() => console.log("historical clicked!")}
+    prevDay = {() => console.log("Prev clicked!")}
+    nextDay = {() => console.log("Next clicked!")}
     />
   );
 };
 
 export default ConnectedHeader;
-
-// logic for the component in this file. especially useful in functional and hooks
