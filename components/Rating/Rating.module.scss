@@ -1,0 +1,59 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 2.7rem;
+	min-width: 2.7rem;
+
+	border-radius: 50%;
+	border: none;
+
+	color: white;
+	cursor: pointer;
+
+	@for $i from 1 through 5 {
+		&:nth-child(#{$i}) {
+			background-color: var(--scale#{$i});
+
+			&:hover {
+				box-shadow: 0 0 0 3px var(--primary-colour), 0 0 0 6px white;
+			}
+		}
+	}
+}
+
+.selected {
+	@extend .button;
+
+	box-shadow: 0 0 0 3px var(--primary-colour), 0 0 0 6px white;
+}
+
+.container {
+	max-width: 900px;
+	margin: auto;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	gap: 0.9rem;
+}
+
+.fieldset {
+	appearance: none;
+	background: var(--primary-colour);
+	border: none;
+	display: flex;
+	justify-content: center;
+
+	margin: 1rem auto 0 auto;
+	padding: 1rem;
+}
+
+.title {
+	color: white;
+	margin: 0 0 1rem 0;
+	font-size: 1rem;
+	font-weight: normal;
+}

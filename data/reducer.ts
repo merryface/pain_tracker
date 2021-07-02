@@ -2,11 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 import initial from './initial';
 
 import updateCommentReducer from './reducers/updateComment';
+import updateRatingReducer from './reducers/updateRating';
 
 const currentInputs = createSlice({
 	name: 'currentInputs',
 	reducers: {
-		updateComment: updateCommentReducer
+		updateComment: updateCommentReducer,
+		updateRating: updateRatingReducer,
 	},
 	initialState: initial
 });
@@ -14,4 +16,5 @@ const currentInputs = createSlice({
 export default currentInputs.reducer;
 export const {
 	updateComment,
+	updateRating,
 } = currentInputs.actions;
