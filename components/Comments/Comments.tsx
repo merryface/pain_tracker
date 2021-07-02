@@ -1,13 +1,22 @@
+import { ChangeEventHandler } from 'react';
 import styles from './Comments.module.scss';
 
 interface Props {
-
+	text?: string
+	handleChange: ChangeEventHandler<HTMLTextAreaElement>
 };
 
-const Comments = ({  }: Props): JSX.Element => {
+const Comments = ({ text = '', handleChange }: Props): JSX.Element => {
 	return (
-		<section>Comments</section>
+		<div className={ styles.container }>
+			<label htmlFor='comments'>Comments</label>
+			<textarea
+				id='comments'
+				onChange={ handleChange }
+			>{ text }</textarea>
+		</div>
 	);
+
 };
 
 export default Comments;

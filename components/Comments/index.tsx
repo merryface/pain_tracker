@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from 'react';
 import Comments from './Comments';
 
 interface Props {
@@ -5,8 +6,15 @@ interface Props {
 };
 
 const ConnectedComments = ({}: Props): JSX.Element => {
+	const handleChange: ChangeEventHandler = () => {
+		// send user input to redux
+	};
+
 	return (
-		<Comments />
+		<Comments
+			text={ '' }
+			handleChange={ handleChange }
+		/>
 	);
 };
 
