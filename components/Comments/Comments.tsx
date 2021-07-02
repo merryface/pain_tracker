@@ -13,7 +13,8 @@ const Comments = ({ text = '', handleChange }: Props): JSX.Element => {
 			<textarea
 				id='comments'
 				onChange={ handleChange }
-			>{ text }</textarea>
+				value={ text }
+			/>
 		</div>
 	);
 
