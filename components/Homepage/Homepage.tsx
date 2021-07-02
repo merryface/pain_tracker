@@ -4,10 +4,10 @@ import Header from '../common/Header'
 import Footer from '../common/Footer';
 
 export default function Homepage() {
-  return (
-    <>
-    <Header />
-    <Footer />
-    </>
-  )
+	return (
+		<>
+			<Header />
+			<Footer />
+		</>
+	)
 }

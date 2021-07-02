@@ -1,10 +1,9 @@
 :root {
-  /* Colours */
-  --primary-colour: #2670FF;
-  --header__text: #fff;
+	/* Colours */
+	--primary-colour: #2670ff;
+	--header__text: #fff;
 
+	/* Font Sizes */
 
-  /* Font Sizes */
-
-  /* Margin and Padding */
+	/* Margin and Padding */
 }
