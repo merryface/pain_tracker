@@ -1,4 +1,3 @@
-import { MouseEventHandler } from 'react';
 import styles from './Rating.module.scss';
 import { iRating, iScale } from '../../data/interfaces';
 
@@ -19,6 +18,7 @@ const Rating = ({ title, current, handleClick }: Props): JSX.Element => {
 				<div className={ styles.buttonContainer }>
 					{ buttons.map(number => (
 						<button
+							key={ number }
 							className={ current === number ? styles.selected : styles.button }
 							type='button'
 							onClick={ () => handleClick({ rating: number, title }) }

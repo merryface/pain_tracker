@@ -10,7 +10,6 @@ interface Props {
 const ConnectedRating = ({ title }: Props): JSX.Element => {
 	const current = useSelector((state: iState) => title in state.ratings ? state.ratings[title] : null);
 
-	console.log(current);
 	const dispatch = useDispatch();
 
 	const handleClick = ({ rating, title }: iRating) => {
