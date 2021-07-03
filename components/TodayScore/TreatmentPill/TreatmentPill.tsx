@@ -1,12 +1,16 @@
 import styles from './TreatmentPill.module.scss';
 
 interface Props {
-
+	colour: string
+	given: boolean
 };
 
-const TreatmentPill = ({  }: Props): JSX.Element => {
+	const TreatmentPill = ({ colour, given = false }: Props): JSX.Element => {
 	return (
-		<section>TreatmentPill</section>
+		<div
+			className={ styles.pill }
+			style={ given ? {background: colour} : {background: 'c3c3c3'} }
+		/>
 	);
 };
 

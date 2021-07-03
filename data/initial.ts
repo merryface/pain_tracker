@@ -10,6 +10,11 @@ const initial: iState = {
 		'Touch Avoidance': null,
 	},
 	todayRating: 1,
+	treatments: {
+		'treatmentOne': false,
+		'treatmentTwo': false,
+		'treatmentThree': false,
+	}
 };
 
 export default initial;

@@ -6,7 +6,10 @@ interface Props {
 
 const ConnectedTreatmentPill = ({}: Props): JSX.Element => {
 	return (
-		<TreatmentPill />
+		<TreatmentPill
+			colour = { "red" }
+			given = { false }
+		/>
 	);
 };
 

@@ -3,7 +3,7 @@ import styles from './score.module.scss';
 
 
 const Score = ({}) => {
-	const score = 3;
+	const score = 1;
 	const backgroundColour = `rgba(255, 021, 020, ${score/5})`;
 
 	return (
