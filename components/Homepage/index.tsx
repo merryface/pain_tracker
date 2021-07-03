@@ -1,7 +1,15 @@
-import Homepage from './Homepage';
+import { useSelector } from 'react-redux';
 
-export default function HomepageConnected() {
-  return (
-      <Homepage />
-  )
+import Homepage from './Homepage';
+import { iState } from '../../data/interfaces';
+
+const ConnectedHomepage = () => {
+	const ratings = useSelector((state: iState) => Object.keys(state.ratings));
+	return (
+		<Homepage
+			ratings={ ratings }
+		/>
+	)
 }
+
+export default ConnectedHomepage;
