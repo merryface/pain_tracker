@@ -12,7 +12,7 @@ const Score = ({}) => {
 
 		<div className={ styles.container }>		
 			<div className={ styles.scoreCard } style={{background: backgroundColour}}>
-				<p>{ score }</p>
+				<p>{ score.toFixed(1) }</p>
 			</div>
 		</div>
 		</>
