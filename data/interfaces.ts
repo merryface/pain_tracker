@@ -1,6 +1,7 @@
 export interface iState {
 	comments: string,
 	ratings: Record<string, iScale>
+	todayRating: number,
 };
 
 export type iScale = 1|2|3|4|5|null;

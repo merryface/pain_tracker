@@ -9,6 +9,7 @@ const initial: iState = {
 		'Applying Back Pressure': null,
 		'Touch Avoidance': null,
 	},
+	todayRating: 1,
 };
 
 export default initial;
