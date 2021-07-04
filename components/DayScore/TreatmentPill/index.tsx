@@ -1,14 +1,15 @@
 import TreatmentPill from './TreatmentPill';
 
 interface Props {
-
+	given: boolean,
+	colour: string
 };
 
-const ConnectedTreatmentPill = ({}: Props): JSX.Element => {
+const ConnectedTreatmentPill = ({given, colour}: Props): JSX.Element => {
 	return (
 		<TreatmentPill
-			colour = { "red" }
-			given = { false }
+			colour = { colour }
+			given = { given }
 		/>
 	);
 };

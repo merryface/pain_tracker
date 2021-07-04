@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.pillsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0.4rem;
+}

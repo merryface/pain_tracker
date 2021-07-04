@@ -12,18 +12,6 @@ const sum = (obj: any) => {
   return sum;
 }
 
-const ratingsSet = (obj: any) => {
-  let ratingsSet = 0;
-
-  for (let i = 0; i < obj.length; i +=1) {
-    if (obj[i] != null) {
-      ratingsSet += 1
-    }
-  }
-
-  return ratingsSet;
-}
-
 const ConnectedScore = () => {
   const ratings = useSelector((state: iState) => state.ratings);
   const rating = sum(ratings) <= 1 ? 1 : sum(ratings)/5;
