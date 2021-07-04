@@ -9,7 +9,6 @@ const initial: iState = {
 		'Applying Back Pressure': null,
 		'Touch Avoidance': null,
 	},
-	dayRating: 1,
 	treatments: {
 		'treatmentOne': false,
 		'treatmentTwo': false,

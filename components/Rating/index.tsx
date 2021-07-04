@@ -15,7 +15,7 @@ const ConnectedRating = ({ title }: Props): JSX.Element => {
 	const handleClick = ({ rating, title }: iRating) => {
 		dispatch(updateRating({
 			rating,
-			title,
+			title
 		}))
 	};
 
