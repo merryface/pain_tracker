@@ -1,11 +1,11 @@
 import Score from './Score';
-// import getData from 'somewhere';
+import { useSelector } from 'react-redux';
 
-const ConnectedHeader = () => {
+const ConnectedScore = () => {
+  
   return (
-    <Score
-    />
+    <Score todayScore = {2} />
   );
 };
 
-export default Score;
+export default ConnectedScore;

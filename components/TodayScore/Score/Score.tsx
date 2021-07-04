@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './score.module.scss';
 
+interface Props {
+	todayScore: number
+};
 
-const Score = ({}) => {
-	const score = 1;
-	const backgroundColour = `rgba(255, 021, 020, ${score/5})`;
+const Score = ({ todayScore = 1 }: Props): JSX.Element => {
+	const backgroundColour = `rgba(255, 021, 020, ${todayScore/5})`;
 
 	return (
 		<>
@@ -12,7 +14,7 @@ const Score = ({}) => {
 
 		<div className={ styles.container }>		
 			<div className={ styles.scoreCard } style={{background: backgroundColour}}>
-				<p>{ score.toFixed(1) }</p>
+				<p>{ todayScore.toFixed(1) }</p>
 			</div>
 		</div>
 		</>

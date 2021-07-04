@@ -9,7 +9,7 @@ interface Props {
 	return (
 		<div
 			className={ styles.pill }
-			style={ given ? {background: colour} : {background: 'c3c3c3'} }
+			style={ given ? {background: colour} : {background: '#c3c3c3'} }
 		/>
 	);
 };
