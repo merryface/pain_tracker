@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const ConnectedScore = () => {
   
   return (
-    <Score todayScore = {2} />
+    <Score DayScore = {2} />
   );
 };
 

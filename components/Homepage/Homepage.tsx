@@ -3,7 +3,7 @@ import Header from '../common/Header'
 import Footer from '../common/Footer';
 import Comments from '../Comments';
 import Rating from '../Rating';
-import TodayScoreCard from '../TodayScore/TodayScoreCard/TodayScoreCard';
+import DayScoreCard from '../DayScore/DayScoreCard';
 
 
 interface Props {
@@ -16,7 +16,7 @@ const Homepage = ({ ratings }: Props): JSX.Element => {
 			<Header />
 
 			<main>
-				<TodayScoreCard />
+				<DayScoreCard />
 				{ ratings.map(rating => (
 					<Rating title={ rating } key={ rating } />
 				))}

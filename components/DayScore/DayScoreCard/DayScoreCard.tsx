@@ -1,4 +1,4 @@
-import styles from './TodayScoreCard.module.scss';
+import styles from './DayScoreCard.module.scss';
 import Score from '../Score';
 import TreatmentPill from '../TreatmentPill';
 
@@ -6,7 +6,7 @@ interface Props {
 
 };
 
-const TodayScoreCard = ({ }: Props): JSX.Element => {
+const DayScoreCard = ({ }: Props): JSX.Element => {
 	return (
 		<div>
 			<Score />
@@ -18,4 +18,4 @@ const TodayScoreCard = ({ }: Props): JSX.Element => {
 	);
 };
 
-export default TodayScoreCard;
+export default DayScoreCard;

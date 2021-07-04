@@ -1,7 +1,7 @@
 export interface iState {
 	comments: string,
 	ratings: Record<string, iScale>
-	todayRating: number,
+	dayRating: number,
 	treatments: Record<string, boolean>
 };
 
