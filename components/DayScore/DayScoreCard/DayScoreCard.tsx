@@ -21,15 +21,15 @@ const DayScoreCard = ({ }: Props): JSX.Element => {
 				<div className = { styles.pillsContainer }>
 					<TreatmentPill
 					colour = { "green" }
-					given = { treatments["treatmentOne"] }
+					given = { treatments["treatmentOne"]["taken"] }
 					/>
 					<TreatmentPill
 					colour = { "red" }
-					given = { treatments["treatmentTwo"] }
+					given = { treatments["treatmentTwo"]["taken"] }
 					/>
 					<TreatmentPill
 					colour = { "blue" }
-					given = { treatments["treatmentThree"] }
+					given = { treatments["treatmentThree"]["taken"] }
 					/>
 				</div>
 			</div>

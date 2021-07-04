@@ -10,9 +10,18 @@ const initial: iState = {
 		'Touch Avoidance': null,
 	},
 	treatments: {
-		'treatmentOne': true,
-		'treatmentTwo': true,
-		'treatmentThree': true,
+		'treatmentOne': {
+			'label': "Treatment 1",
+			'taken': false,
+		},
+		'treatmentTwo': {
+			'label': "Treatment 2",
+			'taken': true,
+		},
+		'treatmentThree': {
+			'label': "Treatment 3",
+			'taken': true,
+		}
 	}
 };
 
