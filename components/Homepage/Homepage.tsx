@@ -4,6 +4,7 @@ import Footer from '../common/Footer';
 import Comments from '../Comments';
 import Rating from '../Rating';
 import DayScoreCard from '../DayScore/DayScoreCard';
+import TreatmentToggle from '../TreatmentToggle/TreatmentToggle';
 
 
 interface Props {
@@ -20,6 +21,7 @@ const Homepage = ({ ratings }: Props): JSX.Element => {
 				{ ratings.map(rating => (
 					<Rating title={ rating } key={ rating } />
 				))}
+				<TreatmentToggle />
 				<Comments />
 			</main>
 
