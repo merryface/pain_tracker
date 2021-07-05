@@ -1,11 +1,22 @@
 .container {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+
+  p {
+    font-size: 1.1rem;
+
+  }
+}
+
+.pillContainer {
   position: relative;
 }
 
 .checkbox {
-  // position: absolute;
-  // left: -9999px;
-  // top: -9999px;
   display: none;
 
   &:checked + span {
