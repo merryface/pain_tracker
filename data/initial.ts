@@ -11,16 +11,16 @@ const initial: iState = {
 	},
 	treatments: {
 		'treatmentOne': {
-			'label': "Treatment 1",
-			'taken': false,
+			label: "Treatment 1",
+			taken: false,
 		},
 		'treatmentTwo': {
-			'label': "Treatment 2",
-			'taken': true,
+			label: "Treatment 2",
+			taken: true,
 		},
 		'treatmentThree': {
-			'label': "Treatment 3",
-			'taken': true,
+			label: "Treatment 3",
+			taken: true,
 		}
 	}
 };

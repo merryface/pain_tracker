@@ -4,8 +4,7 @@ import Footer from '../common/Footer';
 import Comments from '../Comments';
 import Rating from '../Rating';
 import DayScoreCard from '../DayScore/DayScoreCard';
-import TreatmentToggle from '../TreatmentToggle/TreatmentToggle';
-
+import TreatmentToggle from '../TreatmentToggle';
 
 interface Props {
 	ratings: string[],
