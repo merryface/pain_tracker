@@ -2,15 +2,15 @@ import styles from './DayScoreCard.module.scss';
 import Score from '../Score';
 import TreatmentPill from '../TreatmentPill';
 import { useSelector } from 'react-redux';
-import { iState } from '../../../data/interfaces';
-
+import { selectDay } from '../../../data/reducer';
 
 interface Props {
 
 };
 
 const DayScoreCard = ({ }: Props): JSX.Element => {
-	const treatments = useSelector((state: iState) => state.treatments);
+	const day = useSelector(selectDay);
+	const treatments = day.treatments;
 
 
 	return (

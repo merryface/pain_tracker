@@ -8,9 +8,10 @@ import TreatmentToggle from '../TreatmentToggle';
 
 interface Props {
 	ratings: string[],
+	treatments: string[],
 };
 
-const Homepage = ({ ratings }: Props): JSX.Element => {
+const Homepage = ({ ratings, treatments }: Props): JSX.Element => {
 	return (
 		<>
 			<Header />
@@ -20,7 +21,11 @@ const Homepage = ({ ratings }: Props): JSX.Element => {
 				{ ratings.map(rating => (
 					<Rating title={ rating } key={ rating } />
 				))}
-				<TreatmentToggle />
+
+				{ treatments.map(id => (
+					<TreatmentToggle id={ id } key={ id } />
+				))}
+				
 				<Comments />
 			</main>
 

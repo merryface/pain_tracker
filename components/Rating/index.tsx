@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Rating from './Rating';
-import { updateRating } from '../../data/reducer';
-import { iRating, iState } from '../../data/interfaces';
+import { selectDay, updateRating } from '../../data/reducer';
+import { iRating } from '../../data/interfaces';
 
 interface Props {
 	title: string
 };
 
 const ConnectedRating = ({ title }: Props): JSX.Element => {
-	const current = useSelector((state: iState) => title in state.ratings ? state.ratings[title] : null);
+	const day = useSelector(selectDay);
+	const currentRating = title in day.ratings ? day.ratings[title] : null;
 
 	const dispatch = useDispatch();
 
@@ -22,7 +23,7 @@ const ConnectedRating = ({ title }: Props): JSX.Element => {
 	return (
 		<Rating
 			title={ title }
-			current={ current }
+			current={ currentRating }
 			handleClick={ handleClick }
 		/>
 	);

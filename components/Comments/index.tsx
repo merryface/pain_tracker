@@ -2,7 +2,7 @@ import { ChangeEventHandler } from 'react';
 import Comments from './Comments';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateComment } from '../../data/reducer';
-import { iState } from '../../data/interfaces';
+import { selectDay } from '../../data/reducer';
 
 const ConnectedComments = (): JSX.Element => {
 	const dispatch = useDispatch();
@@ -12,9 +12,8 @@ const ConnectedComments = (): JSX.Element => {
 		dispatch(updateComment(input));
 	};
 
-	const text = useSelector((state: iState) => {
-		return state.comments;
-	});
+	const day = useSelector(selectDay);
+	const text = day.comments;
 
 	return (
 		<Comments
