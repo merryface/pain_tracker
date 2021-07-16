@@ -2,7 +2,10 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { iState } from '../interfaces';
 
 const updateComment = (state: iState, action: PayloadAction<string>) => {
-	state.comments = action.payload;
+	const daysArray = Object.values(state.days);
+	const day = daysArray[0];
+	
+	day.comments = action.payload;
 };
 
 export default updateComment;

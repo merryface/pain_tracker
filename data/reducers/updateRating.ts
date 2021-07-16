@@ -2,7 +2,10 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { iState, iRating } from '../interfaces';
 
 const updateRating = (state: iState, action: PayloadAction<iRating>) => {
-	state.ratings[action.payload.title] = action.payload.rating;
+	const daysArray = Object.values(state.days);
+	const day = daysArray[0];
+
+	day.ratings[action.payload.title] = action.payload.rating;
 };
 
 export default updateRating;
