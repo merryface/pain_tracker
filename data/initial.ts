@@ -1,5 +1,6 @@
 import { iState } from './interfaces';
 const today = new Date().setHours(0,0,0,0);
+const yesterday = today - 86400000;
 
 const initial: iState = {
 	currentDay: 1,
@@ -34,8 +35,8 @@ const initial: iState = {
 			}
 		},
 
-		1628829393173: {
-			id: 1628829393173,
+		[yesterday]: {
+			id: yesterday,
 			comments: '',
 			ratings: {
 				'Back Leg Stiffness': null,
