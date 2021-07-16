@@ -4,7 +4,7 @@ interface Props {
 	dayScore: number
 };
 
-const Score = ({ dayScore = 1 }: Props): JSX.Element => {
+const Score = ({ dayScore }: Props): JSX.Element => {
 	const backgroundColour = `rgba(255, 021, 020, ${dayScore/5})`;
 
 	return (
