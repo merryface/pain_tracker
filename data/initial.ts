@@ -1,9 +1,10 @@
 import { iState } from './interfaces';
+const today = new Date().setHours(0,0,0,0);
 
 const initial: iState = {
 	days: {
-		1625825393173: {
-			id: 1625825393173,
+		[today]: {
+			id: today,
 			comments: '',
 			ratings: {
 				'Back Leg Stiffness': null,
@@ -21,12 +22,12 @@ const initial: iState = {
 				treatmentTwo: {
 					id: 'treatmentTwo',
 					label: "Meloxicam",
-					taken: true,
+					taken: false,
 				},
 				treatmentThree: {
 					id: 'treatmentThree',
 					label: "Gabapentin",
-					taken: true,
+					taken: false,
 				}
 			}
 		},
