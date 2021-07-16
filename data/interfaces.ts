@@ -1,4 +1,5 @@
 export type iState = {
+	currentDay: number,
 	days: Record<number, iDay>
 };
 

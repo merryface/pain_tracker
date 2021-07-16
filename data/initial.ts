@@ -2,6 +2,8 @@ import { iState } from './interfaces';
 const today = new Date().setHours(0,0,0,0);
 
 const initial: iState = {
+	currentDay: 0,
+	
 	days: {
 		[today]: {
 			id: today,

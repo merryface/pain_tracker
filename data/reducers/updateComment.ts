@@ -3,7 +3,7 @@ import { iState } from '../interfaces';
 
 const updateComment = (state: iState, action: PayloadAction<string>) => {
 	const daysArray = Object.values(state.days);
-	const day = daysArray[0];
+	const day = daysArray[state.currentDay];
 	
 	day.comments = action.payload;
 };

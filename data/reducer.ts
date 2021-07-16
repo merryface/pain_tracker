@@ -25,5 +25,5 @@ export const {
 
 export const selectDay = (state: iState) => {
 	const daysArray = Object.values(state.days);
-	return daysArray[0];
+	return daysArray[state.currentDay];
 }
