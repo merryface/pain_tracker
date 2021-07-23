@@ -1,11 +1,13 @@
+// Import Tools
 import { createSlice } from '@reduxjs/toolkit';
 import initial from './initial';
 import { iState } from './interfaces';
-
+// --------------------------------
+// Import Reducers
 import updateCommentReducer from './reducers/updateComment';
 import updateRatingReducer from './reducers/updateRating';
 import toggleTreatmentReducer from './reducers/toggleTreatment';
-import previousPageReducer from './reducers/previousPageReducer';
+import previousPageReducer from './reducers/previousPage';
 
 
 const currentInputs = createSlice({
@@ -24,6 +26,7 @@ export const {
 	updateComment,
 	updateRating,
 	toggleTreatment,
+	previousPage,
 } = currentInputs.actions;
 
 export const selectDay = (state: iState) => {
@@ -31,5 +34,4 @@ export const selectDay = (state: iState) => {
 	return daysArray[state.currentDay];
 }
 
-export const previousDay = (state: iState) => state.currentDay - 86400000;
-export const nextDay = (state: iState) => state.currentDay + 86400000;
+export const currentDay = (state: iState) => state.currentDay;

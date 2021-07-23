@@ -1,8 +1,8 @@
 import { ChangeEventHandler } from 'react';
 import Comments from './Comments';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateComment } from '../../data/reducer';
-import { selectDay } from '../../data/reducer';
+import { updateComment, selectDay } from '../../data/reducer';
+// import { selectDay } from '../../data/reducer';
 
 const ConnectedComments = (): JSX.Element => {
 	const dispatch = useDispatch();

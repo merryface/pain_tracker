@@ -1,21 +1,14 @@
 import Footer from './Footer';
 import { useDispatch, useSelector } from 'react-redux';
-import { previousDay } from '../../../data/reducer';
-import {previousPage} from '../../../data/reducers/previousPageReducer';
-
-interface Props {
-	handleClick: ({}: any) => void,
-};
+import { previousPage, currentDay } from '../../../data/reducer';
+import { iState } from '../../../data/interfaces';
 
 const ConnectedFooter = () => {
-	const day = useSelector(previousDay);
+	const day = useSelector(currentDay);
 	const dispatch = useDispatch();
 
-	const handleClickPrevious = ({ currentDay }: any) => {
-		dispatch(previousPage({
-			rating,
-			title
-		}))
+	const handleClickPrevious = ({ currentDay }: iState) => {
+		dispatch(previousPage(currentDay));
 	};
 	
 	return (
@@ -23,7 +16,7 @@ const ConnectedFooter = () => {
 			historical={ () => console.log("historical clicked!") }
 			prevDay={ () => {
 				console.log("Prev clicked!")
-				
+				handleClickPrevious
 			}}
 			nextDay={ () => console.log("Next clicked!") }
 		/>
