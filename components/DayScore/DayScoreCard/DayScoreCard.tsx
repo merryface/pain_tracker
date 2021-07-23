@@ -1,17 +1,13 @@
 import styles from './DayScoreCard.module.scss';
 import Score from '../Score';
 import TreatmentPill from '../TreatmentPill';
-import { useSelector } from 'react-redux';
-import { selectDay } from '../../../data/reducer';
+import { iTreatment } from '../../../data/interfaces';
 
 interface Props {
-
+	treatments: Record<string, iTreatment>
 };
 
-const DayScoreCard = ({ }: Props): JSX.Element => {
-	const day = useSelector(selectDay);
-	const treatments = day.treatments;
-
+const DayScoreCard = ({ treatments }: Props): JSX.Element => {
 
 	return (
 		<div className = { styles.container }>

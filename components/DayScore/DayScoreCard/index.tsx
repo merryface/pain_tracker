@@ -1,12 +1,14 @@
 import DayScoreCard from './DayScoreCard';
-
+import useDay from '../../../data/hooks/useDay';
 interface Props {
 
 };
 
 const ConnectedDayScoreCard = ({}: Props): JSX.Element => {
+	const { treatments } = useDay();
+
 	return (
-		<DayScoreCard />
+		<DayScoreCard treatments={ treatments } />
 	);
 };
 
