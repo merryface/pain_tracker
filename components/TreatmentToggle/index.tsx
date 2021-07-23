@@ -1,15 +1,17 @@
-import { selectDay } from '../../data/reducer';
-import TreatmentToggle from './TreatmentToggle';
-import { useSelector, useDispatch } from 'react-redux';
 import { MouseEventHandler } from 'react';
+import { useDispatch } from 'react-redux';
+
+import TreatmentToggle from './TreatmentToggle';
+
 import { toggleTreatment } from '../../data/reducer';
+import useDay from '../../data/hooks/useDay';
 
 interface Props {
 	id: string
 };
 
 const ConnectedTreatmentToggle = ({id}: Props): JSX.Element => {
-	const day = useSelector(selectDay);
+	const day = useDay();
 	const treatment = day.treatments[id];
 
 	const dispatch = useDispatch();

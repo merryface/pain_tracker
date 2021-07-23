@@ -1,16 +1,16 @@
-import { useSelector } from 'react-redux';
 import Homepage from './Homepage';
-import { selectDay } from '../../data/reducer';
+
+import useDay from '../../data/hooks/useDay';
 
 const ConnectedHomepage = () => {
-	const day = useSelector(selectDay);
+	const day = useDay();
 	const ratings = Object.keys(day.ratings);
-	const treatments= Object.keys(day.treatments);
+	const treatments = Object.keys(day.treatments);
 
 	return (
 		<Homepage
 			ratings={ ratings }
-			treatments={treatments}
+			treatments={ treatments }
 		/>
 	)
 }

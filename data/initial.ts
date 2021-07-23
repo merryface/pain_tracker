@@ -6,11 +6,11 @@ const initial: iState = {
 			id: 1625825393173,
 			comments: '',
 			ratings: {
-				'Back Leg Stiffness': null,
-				'Lack of Playfulness': null,
-				'Touch Sensitivity': null,
-				'Applying Back Pressure': null,
-				'Touch Avoidance': null,
+				'Back Leg Stiffness': 1,
+				'Lack of Playfulness': 1,
+				'Touch Sensitivity': 1,
+				'Applying Back Pressure': 1,
+				'Touch Avoidance': 1,
 			},
 			treatments: {
 				treatmentOne: {
@@ -35,11 +35,11 @@ const initial: iState = {
 			id: 1628829393173,
 			comments: '',
 			ratings: {
-				'Back Leg Stiffness': null,
-				'Lack of Playfulness': null,
-				'Touch Sensitivity': null,
-				'Applying Back Pressure': null,
-				'Touch Avoidance': null,
+				'Back Leg Stiffness': 3,
+				'Lack of Playfulness': 3,
+				'Touch Sensitivity': 3,
+				'Applying Back Pressure': 3,
+				'Touch Avoidance': 3,
 			},
 			treatments: {
 				'treatmentOne': {

@@ -23,7 +23,12 @@ export const {
 	toggleTreatment,
 } = currentInputs.actions;
 
-export const selectDay = (state: iState) => {
+export const selectDay = (id: number | null) => (state: iState) => {
 	const daysArray = Object.values(state.days);
+
+	if (id !== null) {
+		return daysArray[id] ?? daysArray[0];
+	}
+
 	return daysArray[0];
 }

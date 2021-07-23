@@ -1,14 +1,15 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Rating from './Rating';
-import { selectDay, updateRating } from '../../data/reducer';
+import { updateRating } from '../../data/reducer';
 import { iRating } from '../../data/interfaces';
-
+import useDay from '../../data/hooks/useDay';
 interface Props {
 	title: string
 };
 
 const ConnectedRating = ({ title }: Props): JSX.Element => {
-	const day = useSelector(selectDay);
+	const day = useDay();
+
 	const currentRating = title in day.ratings ? day.ratings[title] : null;
 
 	const dispatch = useDispatch();
