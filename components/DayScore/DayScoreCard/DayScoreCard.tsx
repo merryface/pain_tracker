@@ -4,13 +4,14 @@ import TreatmentPill from '../TreatmentPill';
 import { iTreatment } from '../../../data/interfaces';
 
 interface Props {
-	treatments: Record<string, iTreatment>
+	treatments: Record<string, iTreatment>,
+	shouldShrink: boolean,
 };
 
-const DayScoreCard = ({ treatments }: Props): JSX.Element => {
+const DayScoreCard = ({ treatments, shouldShrink }: Props): JSX.Element => {
 
 	return (
-		<div className = { styles.container }>
+		<div className = { shouldShrink ? styles.smallContainer : styles.container }>
 			<h2 className={ styles.title }>Today's Score</h2>
 			<div className = { styles.scoreContainer }>
 				<Score />

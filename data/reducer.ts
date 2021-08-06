@@ -24,6 +24,7 @@ export const {
 } = currentInputs.actions;
 
 export const selectDay = (id: number | null) => (state: iState) => {
+
 	const daysArray = Object.values(state.days);
 
 	if (id !== null) {
