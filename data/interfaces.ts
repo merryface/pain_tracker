@@ -6,7 +6,7 @@ export type iDay = {
 	id: number,
 	comments: string,
 	ratings: Record<string, iScale>
-	treatments: Record<string, iTreatment>
+	treatments: Record<number, iTreatment>
 };
 
 export type iScale = 1|2|3|4|5|null;
@@ -17,7 +17,7 @@ export interface iRating {
 };
 
 export interface iTreatment {
-	id: string,
+	id: number,
 	label: string,
 	taken: boolean,
 };

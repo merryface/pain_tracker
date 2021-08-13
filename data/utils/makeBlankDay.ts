@@ -12,18 +12,18 @@ const makeBlankDay = (id: number): iDay => {
 			'Touch Avoidance': 1,
 		},
 		treatments: {
-			treatmentOne: {
-				id: 'treatmentOne',
+			1: {
+				id: 1,
 				label: "Leg Massage",
 				taken: false,
 			},
-			treatmentTwo: {
-				id: 'treatmentTwo',
+			2: {
+				id: 2,
 				label: "Meloxicam",
 				taken: true,
 			},
-			treatmentThree: {
-				id: 'treatmentThree',
+			3: {
+				id: 3,
 				label: "Gabapentin",
 				taken: true,
 			}

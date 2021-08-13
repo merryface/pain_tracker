@@ -5,7 +5,7 @@ import { iTreatment } from '../../../data/interfaces';
 import getIdFromDate from '../../../data/utils/getIdFromDate';
 
 interface Props {
-	treatments: Record<string, iTreatment>,
+	treatments: Record<number, iTreatment>,
 	id: number,
 };
 
@@ -22,15 +22,15 @@ const DayScoreCard = ({ treatments, id }: Props): JSX.Element => {
 				<div className = { styles.pillsContainer }>
 					<TreatmentPill
 					colour = { "green" }
-					given = { treatments["treatmentOne"]["taken"] }
+					given = { treatments[1]["taken"] }
 					/>
 					<TreatmentPill
 					colour = { "red" }
-					given = { treatments["treatmentTwo"]["taken"] }
+					given = { treatments[2]["taken"] }
 					/>
 					<TreatmentPill
 					colour = { "blue" }
-					given = { treatments["treatmentThree"]["taken"] }
+					given = { treatments[3]["taken"] }
 					/>
 				</div>
 			</div>

@@ -7,7 +7,7 @@ import TreatmentToggle from '../TreatmentToggle';
 
 interface Props {
 	ratings: string[],
-	treatments: string[],
+	treatments: number[],
 };
 
 const Homepage = ({ ratings, treatments }: Props): JSX.Element => {

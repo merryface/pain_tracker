@@ -7,7 +7,7 @@ import { toggleTreatment } from '../../data/reducer';
 import useDay from '../../data/hooks/useDay';
 
 interface Props {
-	id: string
+	id: number
 };
 
 const ConnectedTreatmentToggle = ({id}: Props): JSX.Element => {

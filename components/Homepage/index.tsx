@@ -25,7 +25,7 @@ const ConnectedHomepage = () => {
 	}, [dayId]);
 
 	const ratings = Object.keys(day.ratings ?? {});
-	const treatments = Object.keys(day.treatments ?? {});
+	const treatments = Object.keys(day.treatments ?? {}).map(id => parseInt(id));
 
 	return (
 		<Homepage
