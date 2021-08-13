@@ -4,11 +4,14 @@ interface Props {
 
 };
 
-const ConnectedDayScoreCard = ({}: Props): JSX.Element => {
-	const { treatments } = useDay();
+const ConnectedDayScoreCard = ({ }: Props): JSX.Element => {
+	const { treatments, id } = useDay();
 
 	return (
-		<DayScoreCard treatments={ treatments } />
+		<DayScoreCard
+			treatments={ treatments }
+			id={ id }
+		/>
 	);
 };
 

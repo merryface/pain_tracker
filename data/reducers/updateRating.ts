@@ -1,11 +1,23 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { iState, iRating } from '../interfaces';
+import createDay from './createDay';
 
-const updateRating = (state: iState, action: PayloadAction<iRating>) => {
-	const daysArray = Object.values(state.days);
-	const day = daysArray[0];
+interface iAction {
+	rating: iRating,
+	dayId: number,
+};
 
-	day.ratings[action.payload.title] = action.payload.rating;
+const updateRating = (state: iState, action: PayloadAction<iAction>) => {
+	const day = state.days[action.payload.dayId];
+
+	if (!day) {
+		createDay(state, {
+			type: 'createDay',
+			payload: action.payload.dayId
+		});
+	}
+
+	day.ratings[action.payload.rating.title] = action.payload.rating.rating;
 };
 
 export default updateRating;

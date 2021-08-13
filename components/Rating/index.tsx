@@ -15,10 +15,15 @@ const ConnectedRating = ({ title }: Props): JSX.Element => {
 	const dispatch = useDispatch();
 
 	const handleClick = ({ rating, title }: iRating) => {
-		dispatch(updateRating({
-			rating,
-			title
-		}))
+		if (rating !== null) {
+			dispatch(updateRating({
+				dayId: day.id,
+				rating: {
+					rating,
+					title
+				}
+			}));
+		}
 	};
 
 	return (
