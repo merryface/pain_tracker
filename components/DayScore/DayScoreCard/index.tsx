@@ -13,9 +13,12 @@ const ConnectedDayScoreCard = ({ }: Props): JSX.Element => {
 	const [scrollPos, setScrollPos] = useState<number>(0);
 
 	useEffect(() => {
-		const scrollListener = throttle(() => {
-			console.log('running');
+		const scrollListener = () => {
+
 			const currentYPosition = window.pageYOffset;
+
+			console.log(currentYPosition);
+
 			setScrollPos((previousYPosition) => {
 				if (previousYPosition < currentYPosition) {
 					setScrollingDown(true);
@@ -25,7 +28,7 @@ const ConnectedDayScoreCard = ({ }: Props): JSX.Element => {
 
 				return currentYPosition;
 			});
-		});
+		};
 
 		window.addEventListener('scroll', scrollListener);
 
@@ -34,12 +37,14 @@ const ConnectedDayScoreCard = ({ }: Props): JSX.Element => {
 		};
 	}, [setScrollPos])
 
-	const shouldShrink = scrollingDown && scrollPos > 64;
+	const pastHeader = scrollPos > 64;
+	const shouldShrink = scrollingDown && pastHeader;
 
 	return (
 		<DayScoreCard
 			treatments={ treatments }
 			shouldShrink={ shouldShrink }
+			pastHeader={ pastHeader }
 		/>
 	);
 };

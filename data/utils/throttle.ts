@@ -1,14 +1,16 @@
-const throttle = (fn: (...args: any) => any): any => {
+const throttle = (fn: (...args: any) => any, time: number): any => {
 	let running = false;
 
-	if (!running) {
-		running = true;
+	return (...args: any) => {
+		if (!running) {
+			running = true;
 
-		setTimeout(() => {
-			running = false;
-		}, 500);
+			setTimeout(() => {
+				running = false;
+			}, time);
 
-		return (...args: any) => fn(...args);
+			fn(...args);
+		}
 	}
 };
 
