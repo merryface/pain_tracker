@@ -1,11 +1,22 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
 import Homepage from './Homepage';
 
 import useDay from '../../data/hooks/useDay';
+import { createDay } from '../../data/reducer';
 
 const ConnectedHomepage = () => {
 	const day = useDay();
-	const ratings = Object.keys(day.ratings);
-	const treatments = Object.keys(day.treatments);
+
+	const dispatch = useDispatch();
+	
+	useEffect(() => {
+		dispatch(createDay(day.id));
+	}, [day]);
+
+	const ratings = Object.keys(day.ratings ?? {});
+	const treatments = Object.keys(day.treatments ?? {});
 
 	return (
 		<Homepage

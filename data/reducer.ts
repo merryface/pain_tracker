@@ -5,10 +5,12 @@ import { iState } from './interfaces';
 import updateCommentReducer from './reducers/updateComment';
 import updateRatingReducer from './reducers/updateRating';
 import toggleTreatmentReducer from './reducers/toggleTreatment';
+import createDayReducer from './reducers/createDay';
 
 const currentInputs = createSlice({
 	name: 'currentInputs',
 	reducers: {
+		createDay: createDayReducer,
 		updateComment: updateCommentReducer,
 		updateRating: updateRatingReducer,
 		toggleTreatment: toggleTreatmentReducer,
@@ -18,17 +20,18 @@ const currentInputs = createSlice({
 
 export default currentInputs.reducer;
 export const {
+	createDay,
 	updateComment,
 	updateRating,
 	toggleTreatment,
 } = currentInputs.actions;
 
 export const selectDay = (id: number | null) => (state: iState) => {
-	const daysArray = Object.values(state.days);
+	if (id === null) {
+		const daysArray = Object.values(state.days);
 
-	if (id !== null) {
-		return daysArray[id] ?? daysArray[0];
+		return daysArray[0];
 	}
 
-	return daysArray[0];
+	return state.days[id];
 }

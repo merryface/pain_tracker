@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateComment } from '../../data/reducer';
 import { selectDay } from '../../data/reducer';
 import getDayFromUrl from '../../data/utils/getDayFromUrl';
+import useDay from '../../data/hooks/useDay';
 
 const ConnectedComments = (): JSX.Element => {
 
@@ -15,9 +16,7 @@ const ConnectedComments = (): JSX.Element => {
 		dispatch(updateComment(input));
 	};
 
-	const router = useRouter();
-	const dayId = getDayFromUrl(router.query.day);
-	const day = useSelector(selectDay(dayId));
+	const day = useDay();
 	const text = day.comments;
 
 	return (
