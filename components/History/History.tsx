@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Calendar from 'react-calendar';
 
 import Layout from '../Layout';
+import Score from '../DayScore/Score/Score';
 
 import { iState } from '../../data/interfaces';
 import getIdFromDate from '../../data/utils/getIdFromDate';
@@ -30,14 +31,15 @@ const History = ({ }: Props): JSX.Element => {
 	return (
 		<Layout>
 			<Calendar
+				className={ styles.calendar }
 				onChange={ handleChange }
 				value={ date }
-				formatDay={ (locale, date) => {
+				tileContent={ ({ date }) => {
 					const dateId = getIdFromDate(date);
 					if (days[dateId]) {
-						return `${ date.getDate() } ${ ratingAverage(days[dateId].ratings).toFixed(1) }`
+						return <Score classes={ [styles.score] } dayScore={ ratingAverage(days[dateId].ratings) } />
 					} else {
-						return `${ date.getDate() }`;
+						return <Score classes={ [styles.score] } dayScore={ 0.0 } />;
 					}
 				} }
 			/>

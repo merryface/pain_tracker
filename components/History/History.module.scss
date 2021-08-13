@@ -1,0 +1,20 @@
+.calendar {
+	& :global(.react-calendar__tile) {
+		border: none;
+		background: none;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
+
+.score {
+	height: 2rem;
+	width: 2rem;
+	align-items: stretch;
+
+	div {
+		height: auto;
+		width: auto;
+	}
+}
