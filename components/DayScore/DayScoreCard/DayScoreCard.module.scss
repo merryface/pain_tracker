@@ -1,26 +1,71 @@
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
+.scoreCard {
+	position: relative;
+	height: 13rem;
+}
+
+.largeContainer {
+	position: absolute;
+	top: 0;
+	background: white;
+	width: 100%;
+	height: 13rem;
+	transition: 0.2s;
+}
+
+.smallContainer {
+	@extend .largeContainer;
+	position: relative;
+	padding-bottom: 1rem;
+	height: 6rem;
+
+}
+
+.fixed {
+	position: fixed;
+	box-shadow: 0 -20px 20px 20px black;
 }
 
 .scoreContainer {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
+
+	position: absolute;
+	top: 5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: 0.2s;
+
+	.smallContainer & {
+		top: 50%;
+		left: calc(50% + 2rem);
+		transform: translateY(-50%) scale(0.6);
+	}
 }
 
 .title {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: normal;
+	display: inline-block;
+
+	margin: 0;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: normal;
+
+	position: absolute;
+	top: 2.5rem;
+	right: 50%;
+	transform: translate(50%, -50%);
+	transition: 0.2s;
+
+	.smallContainer & {
+		right: calc(50% - 1rem);
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
 .pillsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 0.4rem;
 }

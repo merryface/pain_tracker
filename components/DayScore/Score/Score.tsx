@@ -6,7 +6,7 @@ interface Props {
 };
 
 const Score = ({ dayScore = 1, classes = [] }: Props): JSX.Element => {
-	const backgroundColour = `rgba(255, 021, 020, ${dayScore/5})`;
+	const backgroundColour = `rgba(255, 021, 020, ${ dayScore / 5 })`;
 
 	const allClassNames = [styles.container, ...classes];
 
