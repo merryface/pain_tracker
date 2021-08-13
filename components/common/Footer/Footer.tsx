@@ -13,7 +13,7 @@ const Footer = ({ next, previous }: Props) => {
 				<a className={ styles.navButton }>&#x2190; {/* left arrow */ } Prev</a>
 			</Link>
 
-			<Link href='/'>
+			<Link href='/history'>
 				<a className={ styles.navButton }>Historical Data</a>
 			</Link>
 

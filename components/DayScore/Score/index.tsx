@@ -1,10 +1,9 @@
 import Score from './Score';
-import { useSelector } from 'react-redux';
-import { iState, iScale } from '../../../data/interfaces';
+import useDay from '../../../data/hooks/useDay';
 import ratingAverage from '../../../data/utils/ratingAverage';
 
 const ConnectedScore = () => {
-  const ratings = useSelector((state: iState) => Object.values(state.days)[0].ratings);
+  const {ratings} = useDay();
   const rating = ratingAverage(ratings);
 
   return (

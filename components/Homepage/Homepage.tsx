@@ -1,6 +1,5 @@
 import React from 'react'
-import Header from '../common/Header'
-import Footer from '../common/Footer';
+import Layout from '../Layout';
 import Comments from '../Comments';
 import Rating from '../Rating';
 import DayScoreCard from '../DayScore/DayScoreCard';
@@ -13,24 +12,18 @@ interface Props {
 
 const Homepage = ({ ratings, treatments }: Props): JSX.Element => {
 	return (
-		<>
-			<Header />
+		<Layout>
+			<DayScoreCard />
+			{ ratings.map(rating => (
+				<Rating title={ rating } key={ rating } />
+			)) }
 
-			<main>
-				<DayScoreCard />
-				{ ratings.map(rating => (
-					<Rating title={ rating } key={ rating } />
-				))}
+			{ treatments.map(id => (
+				<TreatmentToggle id={ id } key={ id } />
+			)) }
 
-				{ treatments.map(id => (
-					<TreatmentToggle id={ id } key={ id } />
-				))}
-				
-				<Comments />
-			</main>
-
-			<Footer />
-		</>
+			<Comments />
+		</Layout>
 	);
 };
 
