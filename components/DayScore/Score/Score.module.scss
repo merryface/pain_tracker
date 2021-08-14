@@ -3,20 +3,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
-  .scoreCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    height: 6rem;
-    width: 6rem;
-    
-    border-radius: 50%;
+}
 
-    
-    color: rgb(66, 66, 66);
-    font-size: 1.5rem;
-  }
+.scoreCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 6rem;
+  width: 6rem;
+
+  border-radius: 50%;
+
+  color: rgb(66, 66, 66);
+  font-size: 1.5rem;
+}
+
+.scoreCardSmall {
+  @extend .scoreCard;
+  height: 2rem;
+  width: 2rem;
+
+  font-size: 1rem;
+  color: white;
 }

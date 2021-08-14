@@ -37,9 +37,9 @@ const History = ({ }: Props): JSX.Element => {
 				tileContent={ ({ date }) => {
 					const dateId = getIdFromDate(date);
 					if (days[dateId]) {
-						return <Score classes={ [styles.score] } dayScore={ ratingAverage(days[dateId].ratings) } />
+						return <Score small={ true } classes={ [styles.score] } dayScore={ ratingAverage(days[dateId].ratings) } />
 					} else {
-						return <Score classes={ [styles.score] } dayScore={ 0.0 } />;
+						return <Score small={ true } classes={ [styles.score] } dayScore={ 0.0 } />;
 					}
 				} }
 			/>
